@@ -18,10 +18,10 @@ let servicePrice1 = +prompt('Сколько будет стоить услуга
 let service2 = prompt('Какой дополнительный тип услуги нужен?', 'подключение онлайн оплаты');
 let servicePrice2 = +prompt('Сколько будет стоить услуга?', '3000');
 
-let fullPrice = Number(screenPrice) + Number(servicePrice1) + Number(servicePrice2);
+let fullPrice = screenPrice + servicePrice1 + servicePrice2;
 console.log(fullPrice);
 
-let servicePercentPrice = Math.ceil(fullPrice - (fullPrice * (Number(rollback) / 100)));
+let servicePercentPrice = Math.ceil(fullPrice - (fullPrice * (rollback) / 100));
 console.log(servicePercentPrice);
 
 if (fullPrice >= 30000) {
